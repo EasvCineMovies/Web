@@ -1,0 +1,20 @@
+﻿@page "/counter"
+@using CineMoviesWeb.Models
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+<p role="status">Greeting: @greeting</p>
+
+<button class="btn btn-primary" @onclick="Greet">Click me</button>
+
+@code {
+    private string greeting = string.Empty;
+
+    private async Task Greet()
+    {
+        greeting = await ApiRequest.Greet() ?? "Error";
+    }
+
+}
