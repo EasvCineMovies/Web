@@ -1,5 +1,6 @@
 ﻿@page "/counter"
 @using CineMoviesWeb.Models
+@using System.Dynamic
 
 <PageTitle>Counter</PageTitle>
 
@@ -7,14 +8,17 @@
 
 <p role="status">Greeting: @greeting</p>
 
-<button class="btn btn-primary" @onclick="Greet">Click me</button>
+<button class="btn btn-primary" @onclick="OnClick">Click me</button>
 
 @code {
     private string greeting = string.Empty;
 
-    private async Task Greet()
+    private async Task OnClick()
     {
-        greeting = await ApiRequest.Greet() ?? "Error";
+        dynamic body = new ExpandoObject();
+        body.greeting = "Hello from C#";
+        
+        greeting = await Adapter.Greet(body) ?? "No greeting";
     }
 
 }

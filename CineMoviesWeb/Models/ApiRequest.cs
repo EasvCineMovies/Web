@@ -1,4 +1,5 @@
 ﻿using System.Net.Http.Headers;
+using System.Runtime.CompilerServices;
 using System.Text;
 using Newtonsoft.Json;
 using RestSharp;
@@ -8,29 +9,21 @@ namespace CineMoviesWeb.Models;
 public class ApiRequest
 {
     private const string URL = "https://easvcinemovies.azurewebsites.net/";
-    private static readonly HttpClient _client = new();
+    private readonly HttpClient Client = new();
 
-    public static async Task<string?> Greet()
+    public async Task<T?> Invoke<T>(Dictionary<T,T> body, [CallerMemberName] string memberName = "") where T : notnull
     {
-        var body = new Dictionary<string, string>
-        {
-            { "greeting", "Hello World!" }
-        };
-        
         var json = JsonConvert.SerializeObject(body);
         
         var request = new HttpRequestMessage
         {
             Method = HttpMethod.Post,
-            RequestUri = new Uri(URL+nameof(Greet)),
+            RequestUri = new Uri(URL+memberName),
             Content = new StringContent(json, Encoding.UTF8, "application/json")
         };
         
-        var response = await _client.SendAsync(request);
+        var response = await Client.SendAsync(request);
 
-        if (!response.IsSuccessStatusCode) return null;
-        
-        return await response.Content.ReadAsStringAsync();
-
+        return !response.IsSuccessStatusCode ? default : JsonConvert.DeserializeObject<T>(await response.Content.ReadAsStringAsync());
     }
 }
