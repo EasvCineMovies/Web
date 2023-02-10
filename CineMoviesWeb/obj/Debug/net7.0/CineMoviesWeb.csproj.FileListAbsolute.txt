@@ -830,3 +830,7 @@ C:\Users\sonko\RiderProjects\CineMoviesWeb\CineMoviesWeb\obj\Debug\net7.0\CineMo
 C:\Users\sonko\RiderProjects\CineMoviesWeb\CineMoviesWeb\obj\Debug\net7.0\refint\CineMoviesWeb.dll
 C:\Users\sonko\RiderProjects\CineMoviesWeb\CineMoviesWeb\obj\Debug\net7.0\CineMoviesWeb.pdb
 C:\Users\sonko\RiderProjects\CineMoviesWeb\CineMoviesWeb\obj\Debug\net7.0\ref\CineMoviesWeb.dll
+C:\Users\sonko\RiderProjects\CineMoviesWeb\CineMoviesWeb\bin\Debug\net7.0\wwwroot\_framework\RestSharp.dll
+C:\Users\sonko\RiderProjects\CineMoviesWeb\CineMoviesWeb\bin\Debug\net7.0\wwwroot\_framework\RestSharp.dll.gz
+C:\Users\sonko\RiderProjects\CineMoviesWeb\CineMoviesWeb\bin\Debug\net7.0\RestSharp.dll
+C:\Users\sonko\RiderProjects\CineMoviesWeb\CineMoviesWeb\obj\Debug\net7.0\build-gz\uSzU17eU.gz

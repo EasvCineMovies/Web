@@ -30,6 +30,7 @@
       "Microsoft.JSInterop.dll": "sha256-T+pG2hbrk10uql1R419lLDE6hBrt97SyDPfQOqHJlZ0=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-GDmvW5LjkyTqyRZAdmYZ1EYwAsZ5NBruoynTP069E2w=",
       "Newtonsoft.Json.dll": "sha256-SBbEJ29XXk2FuAYzoN8urfKUlv4AvcM814Q+YTc73g4=",
+      "RestSharp.dll": "sha256-NKhnQCUv8OJZ38AGqrkDsiOrqHErJdPuF5MiYz\/oKIA=",
       "System.IO.Pipelines.dll": "sha256-P\/MqD0fCBd5bgTM16JC1QC\/Zz7s+CwViyzmDFkBG4\/c=",
       "Microsoft.CSharp.dll": "sha256-GhERxeDKNq+W+cSRzWmwGTi+JNQZOlZHtn1A06oKs6k=",
       "Microsoft.VisualBasic.Core.dll": "sha256-vqbWRCHKPctOHoxXWiZ0jMdRppe3klbyn1hFC3E+I74=",
@@ -199,13 +200,13 @@
       "mscorlib.dll": "sha256-UH9jptJH1wZ3XMBPuMMAEaUKpfRxc5AgXkLdAFAvNVE=",
       "netstandard.dll": "sha256-+jUzj0FB0YcoBUeSkSNEjhVDTG08qbZ2twfCBMbzT+Q=",
       "System.Private.CoreLib.dll": "sha256-l+\/quNqfNCSUDSMJcp0+IxlSdOdnAtwVVWMXmYGHMpg=",
-      "CineMoviesWeb.dll": "sha256-tZhqm30ZSY2icoFnY1ocdv\/5R\/FlTbNcZpRGvl7RKMY="
+      "CineMoviesWeb.dll": "sha256-rDxxaS\/VmhVomYWkRf4r+vKYwc4nGSjpZUgMhW3bF7k="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "CineMoviesWeb.pdb": "sha256-k4uUjUcRyY692EdjtFJYbZmzWspkm8j5i1rh+mPJ9yU="
+      "CineMoviesWeb.pdb": "sha256-WVXtwhTqd4gg69EZaxjtZQE3NMtPV\/QoaIaBzYsp2TQ="
     },
     "runtime": {
       "dotnet.7.0.1.8de8jswto7.js": "sha256-jjax3FMRXzFAziWowdtJf6vipP2xXAaA5gD6VBYB6Y0=",

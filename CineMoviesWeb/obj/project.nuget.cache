@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "W0YsQYHld+yvZa4Fk7fuJfIj3gXbWc+e6bq7ZjoOAfyp/MN1f9zfjqiF5RZ2nl8rv9+KQQijhELG0g3XJmN2Qw==",
+  "dgSpecHash": "SAVtDbHXcDnVflYBzsWP0IQRdPMv/eSVh1RqzerbDbLyNebCfUjXimrfxFgAwbq+qxsWs5r4kWWG2t9QH+y92g==",
   "success": true,
   "projectFilePath": "C:\\Users\\sonko\\RiderProjects\\CineMoviesWeb\\CineMoviesWeb\\CineMoviesWeb.csproj",
   "expectedPackageFiles": [
@@ -29,6 +29,7 @@
     "C:\\Users\\sonko\\.nuget\\packages\\microsoft.jsinterop\\7.0.1\\microsoft.jsinterop.7.0.1.nupkg.sha512",
     "C:\\Users\\sonko\\.nuget\\packages\\microsoft.jsinterop.webassembly\\7.0.1\\microsoft.jsinterop.webassembly.7.0.1.nupkg.sha512",
     "C:\\Users\\sonko\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512",
+    "C:\\Users\\sonko\\.nuget\\packages\\restsharp\\108.0.3\\restsharp.108.0.3.nupkg.sha512",
     "C:\\Users\\sonko\\.nuget\\packages\\system.io.pipelines\\7.0.0\\system.io.pipelines.7.0.0.nupkg.sha512",
     "C:\\Users\\sonko\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\sonko\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",

@@ -21,20 +21,20 @@ main[b-qnsv59qkux] {
     align-items: center;
 }
 
-    .top-row[b-qnsv59qkux]  a, .top-row[b-qnsv59qkux]  .btn-link {
-        white-space: nowrap;
-        margin-left: 1.5rem;
-        text-decoration: none;
-    }
+.top-row[b-qnsv59qkux]  a, .top-row[b-qnsv59qkux]  .btn-link {
+    white-space: nowrap;
+    margin-left: 1.5rem;
+    text-decoration: none;
+}
 
-    .top-row[b-qnsv59qkux]  a:hover, .top-row[b-qnsv59qkux]  .btn-link:hover {
-        text-decoration: underline;
-    }
+.top-row[b-qnsv59qkux]  a:hover, .top-row[b-qnsv59qkux]  .btn-link:hover {
+    text-decoration: underline;
+}
 
-    .top-row[b-qnsv59qkux]  a:first-child {
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
+.top-row[b-qnsv59qkux]  a:first-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 @media (max-width: 640.98px) {
     .top-row:not(.auth)[b-qnsv59qkux] {
