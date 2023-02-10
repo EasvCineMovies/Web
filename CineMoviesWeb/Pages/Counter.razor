@@ -6,19 +6,19 @@
 
 <h1>Counter</h1>
 
-<p role="status">Greeting: @greeting</p>
+<p role="status">Greeting: @_greeting</p>
 
 <button class="btn btn-primary" @onclick="OnClick">Click me</button>
 
 @code {
-    private string greeting = string.Empty;
+    private string _greeting = string.Empty;
 
     private async Task OnClick()
     {
         dynamic body = new ExpandoObject();
         body.greeting = "Hello from C#";
         
-        greeting = await Adapter.Greet(body) ?? "No greeting";
+        _greeting = await ApiRequestAdapter.Greet(body) ?? "No greeting";
     }
 
 }
