@@ -10,7 +10,10 @@ pipeline {
       steps
       {
         dir("Tests")
-        sh "rm -rf TestResults"
+        {
+          sh "rm -rf TestResults"
+          echo "STARTUP STAGE HAS BEEN COMPLETED"
+        }
       }
     }
     stage("BUILD")
@@ -22,13 +25,17 @@ pipeline {
         echo "BUILD STAGE HAS BEEN COMPLETED"
       }
     }
-    stage("TEST"){
+    stage("TEST")
+    {
       steps
       {
         dir("Tests")
-        {
-          sh "dotnet add package  coverlet.collector"
+        { 
+          sh "dotnet add package coverlet.collector"
           sh "dotnet test --collect:'XPlat Code Coverage'"
+          sh "dotnet restore"
+          echo "TEST PROJECT SHOULD BE RAN HERE"
+          echo "TEST STAGE HAS BEEN COMPLETED"
         }
       }
       post
@@ -38,15 +45,8 @@ pipeline {
           archiveArtifacts "Tests/TestResults/*/coverage.cobertura.xml"
           publishCoverage adapters: [istanbulCoberturaAdapter(path: 'Tests/TestResults/*/coverage.cobertura.xml', thresholds:
           [[failUnhealthy: true, thresholdTarget: 'Conditional', unhealthyThreshold: 80.0, unstableThreshold: 50.0]])], checksName: '',
-          sourceFileResolver: sourceFiles('NEVER STORE')
+          sourceFileResolver: sourceFiles('NEVER_STORE')
         }
-      }
-    }
-    stage("TEST")
-    {
-      steps
-      {
-        echo "Test started."
       }
     }
     stage("DEPLOY")
