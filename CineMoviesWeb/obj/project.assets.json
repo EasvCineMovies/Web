@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net7.0": {
+      "BCrypt.Net-Next/4.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/BCrypt.Net-Next.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/BCrypt.Net-Next.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Authorization/7.0.1": {
         "type": "package",
         "dependencies": {
@@ -428,19 +441,6 @@
         },
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "RestSharp/108.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net6.0/RestSharp.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/RestSharp.dll": {
             "related": ".xml"
           }
         }
@@ -504,6 +504,19 @@
       }
     },
     "net7.0/browser-wasm": {
+      "BCrypt.Net-Next/4.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/BCrypt.Net-Next.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/BCrypt.Net-Next.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Authorization/7.0.1": {
         "type": "package",
         "dependencies": {
@@ -934,19 +947,6 @@
           }
         }
       },
-      "RestSharp/108.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net6.0/RestSharp.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/RestSharp.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "System.IO.Pipelines/7.0.0": {
         "type": "package",
         "compile": {
@@ -1001,6 +1001,37 @@
     }
   },
   "libraries": {
+    "BCrypt.Net-Next/4.0.3": {
+      "sha512": "W+U9WvmZQgi5cX6FS5GDtDoPzUCV4LkBLkywq/kRZhuDwcbavOzcDAr3LXJFqHUi952Yj3LEYoWW0jbEUQChsA==",
+      "type": "package",
+      "path": "bcrypt.net-next/4.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bcrypt.net-next.4.0.3.nupkg.sha512",
+        "bcrypt.net-next.nuspec",
+        "ico.png",
+        "lib/net20/BCrypt.Net-Next.dll",
+        "lib/net20/BCrypt.Net-Next.xml",
+        "lib/net35/BCrypt.Net-Next.dll",
+        "lib/net35/BCrypt.Net-Next.xml",
+        "lib/net462/BCrypt.Net-Next.dll",
+        "lib/net462/BCrypt.Net-Next.xml",
+        "lib/net472/BCrypt.Net-Next.dll",
+        "lib/net472/BCrypt.Net-Next.xml",
+        "lib/net48/BCrypt.Net-Next.dll",
+        "lib/net48/BCrypt.Net-Next.xml",
+        "lib/net5.0/BCrypt.Net-Next.dll",
+        "lib/net5.0/BCrypt.Net-Next.xml",
+        "lib/net6.0/BCrypt.Net-Next.dll",
+        "lib/net6.0/BCrypt.Net-Next.xml",
+        "lib/netstandard2.0/BCrypt.Net-Next.dll",
+        "lib/netstandard2.0/BCrypt.Net-Next.xml",
+        "lib/netstandard2.1/BCrypt.Net-Next.dll",
+        "lib/netstandard2.1/BCrypt.Net-Next.xml",
+        "readme.md"
+      ]
+    },
     "Microsoft.AspNetCore.Authorization/7.0.1": {
       "sha512": "yhkU+dAvkp1o1ZhihwKFsGy2RXxBaLCohev0HN8yaqfFsV1ThvQIRPh6GKcoPln/ARY23N0gIkOv5zx36HRXhg==",
       "type": "package",
@@ -1746,24 +1777,6 @@
         "packageIcon.png"
       ]
     },
-    "RestSharp/108.0.3": {
-      "sha512": "phq1AkVhqVXHZxvWDV4fJEJKCR5OHNFUGx2Ix8o5EFShS6654oZhth4X2RWvaU/W7UexIswW0T+lTirxfLU2Ow==",
-      "type": "package",
-      "path": "restsharp/108.0.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net5.0/RestSharp.dll",
-        "lib/net5.0/RestSharp.xml",
-        "lib/net6.0/RestSharp.dll",
-        "lib/net6.0/RestSharp.xml",
-        "lib/netstandard2.0/RestSharp.dll",
-        "lib/netstandard2.0/RestSharp.xml",
-        "restsharp.108.0.3.nupkg.sha512",
-        "restsharp.nuspec",
-        "restsharp.png"
-      ]
-    },
     "System.IO.Pipelines/7.0.0": {
       "sha512": "jRn6JYnNPW6xgQazROBLSfpdoczRw694vO5kKvMcNnpXuolEixUyw6IBuBs2Y2mlSX/LdLvyyWmfXhaI3ND1Yg==",
       "type": "package",
@@ -1896,10 +1909,10 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "BCrypt.Net-Next >= 4.0.3",
       "Microsoft.AspNetCore.Components.WebAssembly >= 7.0.1",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 7.0.1",
-      "Newtonsoft.Json >= 13.0.2",
-      "RestSharp >= 108.0.3"
+      "Newtonsoft.Json >= 13.0.2"
     ]
   },
   "packageFolders": {
@@ -1941,6 +1954,10 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
+          "BCrypt.Net-Next": {
+            "target": "Package",
+            "version": "[4.0.3, )"
+          },
           "Microsoft.AspNetCore.Components.WebAssembly": {
             "target": "Package",
             "version": "[7.0.1, )"
@@ -1953,10 +1970,6 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.2, )"
-          },
-          "RestSharp": {
-            "target": "Package",
-            "version": "[108.0.3, )"
           }
         },
         "imports": [

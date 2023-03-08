@@ -272,6 +272,16 @@ public abstract class ApiRequestAdapter
         return await ApiRequest.Invoke<User>(body, "user/update");
     }
     
+    public static async Task<User> LoginUser(string phone, string password)
+    {
+        var body = new Dictionary<string, object>
+        {
+            { "phone", phone },
+            { "password", password },
+        };
+        return await ApiRequest.Invoke<User>(body, "user/login");
+    }
+    
     public static async Task<User> DeleteUser(int id)
     {
         var body = new Dictionary<string, object>

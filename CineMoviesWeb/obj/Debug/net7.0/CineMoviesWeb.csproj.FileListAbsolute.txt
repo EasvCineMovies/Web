@@ -653,10 +653,6 @@ C:\Users\sonko\RiderProjects\CineMoviesWeb\CineMoviesWeb\obj\Debug\net7.0\CineMo
 C:\Users\sonko\RiderProjects\CineMoviesWeb\CineMoviesWeb\obj\Debug\net7.0\refint\CineMoviesWeb.dll
 C:\Users\sonko\RiderProjects\CineMoviesWeb\CineMoviesWeb\obj\Debug\net7.0\CineMoviesWeb.pdb
 C:\Users\sonko\RiderProjects\CineMoviesWeb\CineMoviesWeb\obj\Debug\net7.0\ref\CineMoviesWeb.dll
-C:\Users\sonko\RiderProjects\CineMoviesWeb\CineMoviesWeb\bin\Debug\net7.0\wwwroot\_framework\RestSharp.dll
-C:\Users\sonko\RiderProjects\CineMoviesWeb\CineMoviesWeb\bin\Debug\net7.0\wwwroot\_framework\RestSharp.dll.gz
-C:\Users\sonko\RiderProjects\CineMoviesWeb\CineMoviesWeb\bin\Debug\net7.0\RestSharp.dll
-C:\Users\sonko\RiderProjects\CineMoviesWeb\CineMoviesWeb\obj\Debug\net7.0\build-gz\uSzU17eU.gz
 C:\Users\sonko\RiderProjects\CineMoviesWeb\CineMoviesWeb\bin\Debug\net7.0\wwwroot\_framework\dotnet.7.0.2.40u5csabsm.js
 C:\Users\sonko\RiderProjects\CineMoviesWeb\CineMoviesWeb\bin\Debug\net7.0\wwwroot\_framework\dotnet.7.0.2.40u5csabsm.js.gz
 C:\Users\sonko\RiderProjects\CineMoviesWeb\CineMoviesWeb\obj\Debug\net7.0\build-gz\9h5zHxgL.gz
@@ -834,3 +830,7 @@ C:\Users\sonko\RiderProjects\CineMoviesWeb\CineMoviesWeb\obj\Debug\net7.0\build-
 C:\Users\sonko\RiderProjects\CineMoviesWeb\CineMoviesWeb\obj\Debug\net7.0\build-gz\4mp+FIzK.gz
 C:\Users\sonko\RiderProjects\CineMoviesWeb\CineMoviesWeb\obj\Debug\net7.0\build-gz\BebyVc9F.gz
 C:\Users\sonko\RiderProjects\CineMoviesWeb\CineMoviesWeb\obj\Debug\net7.0\build-gz\i1d1hwjx.gz
+C:\Users\sonko\RiderProjects\CineMoviesWeb\CineMoviesWeb\bin\Debug\net7.0\wwwroot\_framework\BCrypt.Net-Next.dll
+C:\Users\sonko\RiderProjects\CineMoviesWeb\CineMoviesWeb\bin\Debug\net7.0\wwwroot\_framework\BCrypt.Net-Next.dll.gz
+C:\Users\sonko\RiderProjects\CineMoviesWeb\CineMoviesWeb\bin\Debug\net7.0\BCrypt.Net-Next.dll
+C:\Users\sonko\RiderProjects\CineMoviesWeb\CineMoviesWeb\obj\Debug\net7.0\build-gz\hxcfgM6o.gz

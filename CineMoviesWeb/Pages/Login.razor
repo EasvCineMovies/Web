@@ -1,0 +1,51 @@
+﻿@page "/login"
+@using CineMoviesWeb.Models
+@using System.Dynamic
+
+<PageTitle>Login</PageTitle>
+
+<h1>Login</h1>
+
+<div>
+    <input type="text" class="form-control" placeholder="Phone" @bind="_phone"/>
+    <input type="password" class="form-control" placeholder="Password" @bind="_password"/>
+    <button class="btn btn-primary" @onclick="LoginClick">Login</button>
+</div>
+
+<div>
+    <input type="text" class="form-control" placeholder="Name" @bind="_name"/>
+    <input type="text" class="form-control" placeholder="Phone" @bind="_phone"/>
+    <input type="text" class="form-control" placeholder="Email" @bind="_email"/>
+    <input type="password" class="form-control" placeholder="Password" @bind="_password"/>
+    <button class="btn btn-primary" @onclick="RegisterClick">Register</button>
+</div>
+
+
+@code {
+
+    string? _name;
+    string? _email;
+    string? _password;
+    string? _phone;
+
+    private async Task LoginClick()
+    {
+        var response = await ApiRequestAdapter.LoginUser(
+            phone: _phone ?? throw new Exception("Phone is null"),
+            password: _password ?? throw new Exception("Password is null")
+            );
+
+        Console.WriteLine(response);
+    }
+    
+    private async Task RegisterClick()
+    {
+        var response = await ApiRequestAdapter.CreateUser(
+            name: _name ?? throw new Exception("Name is null"),
+            email: _email ?? throw new Exception("Email is null"),
+            password: PasswordHelper.HashPassword(_password ?? throw new Exception("Password is null")) ,
+            phone: _phone ?? throw new Exception("Phone is null")
+            );
+    }
+
+}
