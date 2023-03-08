@@ -18,7 +18,6 @@
         dynamic body = new ExpandoObject();
         body.greeting = "Hello from C#";
         
-        _greeting = await ApiRequestAdapter.Greet(body) ?? "No greeting";
     }
 
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "SAVtDbHXcDnVflYBzsWP0IQRdPMv/eSVh1RqzerbDbLyNebCfUjXimrfxFgAwbq+qxsWs5r4kWWG2t9QH+y92g==",
+  "dgSpecHash": "KxO8fwy6otOF8xVV/5npNHOMHNPocy0x/c/FeF0c4vMTOVqKSBN7wW3C8B6CbfpcDCcsaXDHZbrD464X+tsClw==",
   "success": true,
   "projectFilePath": "C:\\Users\\sonko\\RiderProjects\\CineMoviesWeb\\CineMoviesWeb\\CineMoviesWeb.csproj",
   "expectedPackageFiles": [
@@ -33,7 +33,7 @@
     "C:\\Users\\sonko\\.nuget\\packages\\system.io.pipelines\\7.0.0\\system.io.pipelines.7.0.0.nupkg.sha512",
     "C:\\Users\\sonko\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\sonko\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
-    "C:\\Users\\sonko\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\7.0.1\\microsoft.netcore.app.runtime.mono.browser-wasm.7.0.1.nupkg.sha512"
+    "C:\\Users\\sonko\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\7.0.2\\microsoft.netcore.app.runtime.mono.browser-wasm.7.0.2.nupkg.sha512"
   ],
   "logs": []
 }
