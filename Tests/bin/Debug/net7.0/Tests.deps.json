@@ -19,6 +19,14 @@
           "Tests.dll": {}
         }
       },
+      "BCrypt.Net-Next/4.0.3": {
+        "runtime": {
+          "lib/net6.0/BCrypt.Net-Next.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.0.3.0"
+          }
+        }
+      },
       "coverlet.collector/3.1.2": {},
       "Microsoft.AspNetCore.Authorization/7.0.1": {
         "dependencies": {
@@ -567,14 +575,6 @@
       },
       "NUnit.Analyzers/3.3.0": {},
       "NUnit3TestAdapter/4.2.1": {},
-      "RestSharp/108.0.3": {
-        "runtime": {
-          "lib/net6.0/RestSharp.dll": {
-            "assemblyVersion": "108.0.3.0",
-            "fileVersion": "108.0.3.0"
-          }
-        }
-      },
       "System.IO.Pipelines/7.0.0": {
         "runtime": {
           "lib/net7.0/System.IO.Pipelines.dll": {
@@ -592,9 +592,9 @@
       },
       "CineMoviesWeb/1.0.0": {
         "dependencies": {
+          "BCrypt.Net-Next": "4.0.3",
           "Microsoft.AspNetCore.Components.WebAssembly": "7.0.1",
-          "Newtonsoft.Json": "13.0.2",
-          "RestSharp": "108.0.3"
+          "Newtonsoft.Json": "13.0.2"
         },
         "runtime": {
           "CineMoviesWeb.dll": {}
@@ -607,6 +607,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "BCrypt.Net-Next/4.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-W+U9WvmZQgi5cX6FS5GDtDoPzUCV4LkBLkywq/kRZhuDwcbavOzcDAr3LXJFqHUi952Yj3LEYoWW0jbEUQChsA==",
+      "path": "bcrypt.net-next/4.0.3",
+      "hashPath": "bcrypt.net-next.4.0.3.nupkg.sha512"
     },
     "coverlet.collector/3.1.2": {
       "type": "package",
@@ -852,13 +859,6 @@
       "sha512": "sha512-kgH8VKsrcZZgNGQXRpVCrM7TnNz9li3b/snH+YmnXUNqsaWa1Xw9EQWHpbzq4Li2FbTjTE/E5N5HdLNXzZ8BpQ==",
       "path": "nunit3testadapter/4.2.1",
       "hashPath": "nunit3testadapter.4.2.1.nupkg.sha512"
-    },
-    "RestSharp/108.0.3": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-phq1AkVhqVXHZxvWDV4fJEJKCR5OHNFUGx2Ix8o5EFShS6654oZhth4X2RWvaU/W7UexIswW0T+lTirxfLU2Ow==",
-      "path": "restsharp/108.0.3",
-      "hashPath": "restsharp.108.0.3.nupkg.sha512"
     },
     "System.IO.Pipelines/7.0.0": {
       "type": "package",

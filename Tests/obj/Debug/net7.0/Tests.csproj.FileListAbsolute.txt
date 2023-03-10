@@ -45,7 +45,6 @@ C:\Users\sonko\RiderProjects\CineMoviesWeb\Tests\bin\Debug\net7.0\Microsoft.Visu
 C:\Users\sonko\RiderProjects\CineMoviesWeb\Tests\bin\Debug\net7.0\Newtonsoft.Json.dll
 C:\Users\sonko\RiderProjects\CineMoviesWeb\Tests\bin\Debug\net7.0\NuGet.Frameworks.dll
 C:\Users\sonko\RiderProjects\CineMoviesWeb\Tests\bin\Debug\net7.0\nunit.framework.dll
-C:\Users\sonko\RiderProjects\CineMoviesWeb\Tests\bin\Debug\net7.0\RestSharp.dll
 C:\Users\sonko\RiderProjects\CineMoviesWeb\Tests\bin\Debug\net7.0\System.IO.Pipelines.dll
 C:\Users\sonko\RiderProjects\CineMoviesWeb\Tests\bin\Debug\net7.0\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
 C:\Users\sonko\RiderProjects\CineMoviesWeb\Tests\bin\Debug\net7.0\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
@@ -125,3 +124,4 @@ C:\Users\sonko\RiderProjects\CineMoviesWeb\Tests\obj\Debug\net7.0\refint\Tests.d
 C:\Users\sonko\RiderProjects\CineMoviesWeb\Tests\obj\Debug\net7.0\Tests.pdb
 C:\Users\sonko\RiderProjects\CineMoviesWeb\Tests\obj\Debug\net7.0\Tests.genruntimeconfig.cache
 C:\Users\sonko\RiderProjects\CineMoviesWeb\Tests\obj\Debug\net7.0\ref\Tests.dll
+C:\Users\sonko\RiderProjects\CineMoviesWeb\Tests\bin\Debug\net7.0\BCrypt.Net-Next.dll
