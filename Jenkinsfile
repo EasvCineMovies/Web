@@ -40,7 +40,7 @@ pipeline {
     {
       steps
       {
-        echo "Deployment started."
+        sh "docker compose up -d"
       }
     }
   }
