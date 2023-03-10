@@ -31,8 +31,21 @@ pipeline {
       {
         dir("Tests")
         { 
-          echo "TEST PROJECT SHOULD BE RAN HERE"
+          sh "dotnet add package coverlet.collector"
+          sh "dotnet test --collect:'XPlat Code Coverage'"
+          sh "dotnet restore"
+          sh "dotnet test Tests.csproj"
           echo "TEST STAGE HAS BEEN COMPLETED"
+        }
+      }
+      post
+      {
+        success
+        {
+          archiveArtifacts "Tests/TestResults/*/coverage.cobertura.xml"
+          publishCoverage adapters: [istanbulCoberturaAdapter(path: 'Tests/TestResults/*/coverage.cobertura.xml', thresholds:
+          [[failUnhealthy: true, thresholdTarget: 'Conditional', unhealthyThreshold: 80.0, unstableThreshold: 50.0]])], checksName: '',
+          sourceFileResolver: sourceFiles('NEVER_STORE')
         }
       }
     }
