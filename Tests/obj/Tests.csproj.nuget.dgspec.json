@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sonko\\RiderProjects\\CineMoviesWeb\\Tests\\Tests.csproj": {}
+    "C:\\Users\\sonko\\RiderProjects\\web\\Tests\\Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sonko\\RiderProjects\\CineMoviesWeb\\CineMoviesWeb\\CineMoviesWeb.csproj": {
+    "C:\\Users\\sonko\\RiderProjects\\web\\CineMoviesWeb\\CineMoviesWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sonko\\RiderProjects\\CineMoviesWeb\\CineMoviesWeb\\CineMoviesWeb.csproj",
+        "projectUniqueName": "C:\\Users\\sonko\\RiderProjects\\web\\CineMoviesWeb\\CineMoviesWeb.csproj",
         "projectName": "CineMoviesWeb",
-        "projectPath": "C:\\Users\\sonko\\RiderProjects\\CineMoviesWeb\\CineMoviesWeb\\CineMoviesWeb.csproj",
+        "projectPath": "C:\\Users\\sonko\\RiderProjects\\web\\CineMoviesWeb\\CineMoviesWeb.csproj",
         "packagesPath": "C:\\Users\\sonko\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sonko\\RiderProjects\\CineMoviesWeb\\CineMoviesWeb\\obj\\",
+        "outputPath": "C:\\Users\\sonko\\RiderProjects\\web\\CineMoviesWeb\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -58,6 +58,10 @@
               "target": "Package",
               "version": "[7.0.1, )"
             },
+            "Microsoft.AspNetCore.WebUtilities": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.2, )"
@@ -77,7 +81,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[7.0.2, 7.0.2]"
+              "version": "[7.0.3, 7.0.3]"
             }
           ],
           "frameworkReferences": {
@@ -85,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -94,14 +98,14 @@
         }
       }
     },
-    "C:\\Users\\sonko\\RiderProjects\\CineMoviesWeb\\Tests\\Tests.csproj": {
+    "C:\\Users\\sonko\\RiderProjects\\web\\Tests\\Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sonko\\RiderProjects\\CineMoviesWeb\\Tests\\Tests.csproj",
+        "projectUniqueName": "C:\\Users\\sonko\\RiderProjects\\web\\Tests\\Tests.csproj",
         "projectName": "Tests",
-        "projectPath": "C:\\Users\\sonko\\RiderProjects\\CineMoviesWeb\\Tests\\Tests.csproj",
+        "projectPath": "C:\\Users\\sonko\\RiderProjects\\web\\Tests\\Tests.csproj",
         "packagesPath": "C:\\Users\\sonko\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sonko\\RiderProjects\\CineMoviesWeb\\Tests\\obj\\",
+        "outputPath": "C:\\Users\\sonko\\RiderProjects\\web\\Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -123,8 +127,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\sonko\\RiderProjects\\CineMoviesWeb\\CineMoviesWeb\\CineMoviesWeb.csproj": {
-                "projectPath": "C:\\Users\\sonko\\RiderProjects\\CineMoviesWeb\\CineMoviesWeb\\CineMoviesWeb.csproj"
+              "C:\\Users\\sonko\\RiderProjects\\web\\CineMoviesWeb\\CineMoviesWeb.csproj": {
+                "projectPath": "C:\\Users\\sonko\\RiderProjects\\web\\CineMoviesWeb\\CineMoviesWeb.csproj"
               }
             }
           }
@@ -176,7 +180,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

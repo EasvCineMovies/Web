@@ -15,7 +15,7 @@ public class ScheduleTests
         Assert.That(response, Is.Not.Null);
         Assert.That(response.GetType(), Is.EqualTo(typeof(Schedule)));
         
-        _scheduleToDeleteId = response.Id ?? 0;
+        _scheduleToDeleteId = response.Id;
     }
     
     [Test]

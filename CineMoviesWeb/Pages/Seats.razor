@@ -1,0 +1,79 @@
+﻿@page "/seats/{scheduleId:int}"
+@using DevOpsCineMovies.Entities
+@using CineMoviesWeb.Models
+
+<h3>Seats</h3>
+
+@if (_seats == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Seat No
+                </th>
+                <th>
+                    Seat Row
+                </th>
+                <th>
+                    Seat Column
+                </th>
+                <th>
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var seat in _seats)
+            {
+                <tr>
+                    <td>
+                        @seat.Id
+                    </td>
+                    <td>
+                        @seat.Row
+                    </td>
+                    <td>
+                        @seat.Column
+                    </td>
+                    <td>
+                        <button class="btn btn-primary" @onclick="async () => {
+                        await CreateReservation(seat.Id);}">Reserve</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    [Parameter]
+    public int ScheduleId { get; set; }
+
+    private List<Seat>? _seats { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        _seats = await ApiRequestAdapter.ReadAllSeats(1);
+    }
+    
+    async Task CreateReservation(int seatId)
+    {
+        List<Schedule> schedules = await ApiRequestAdapter.ReadSchedule(1);
+        Schedule schedule = schedules.FirstOrDefault(s => s.Id == ScheduleId) ?? throw new Exception("Schedule not found");
+        Movie movie = await ApiRequestAdapter.ReadMovie(schedule.MovieId);
+        await ApiRequestAdapter.CreateReservation(
+            userId: UserHandler.GetUser()!.Id,
+            seatId: seatId,
+            movieId: movie.Id,
+            cinemaId: 1,
+            scheduleId: ScheduleId,
+            price: 250,
+            reservationDate: DateTime.Now
+            );
+    }
+}

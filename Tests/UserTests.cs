@@ -15,7 +15,7 @@ public class UserTests
         Assert.That(response, Is.Not.Null);
         Assert.That(response.GetType(), Is.EqualTo(typeof(User)));
         
-        _userToDeleteId = response.Id ?? 0;
+        _userToDeleteId = response.Id;
     }
     
     [Test]

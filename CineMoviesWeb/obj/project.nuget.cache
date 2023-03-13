@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GZ7gnNX5E9uE5UyYKndKxjLROAPpyrsFnK7Yd15gCXPCOfYhvACGvQJ+bXrp3EFBXL95btZ5UFAn44TA0L/WtQ==",
+  "dgSpecHash": "+D5J4km4pvhcuGIBtmHS23gh7fVeDDVySstBbYXqOb4ZeYHwcTpzZU6JkOH6c+XEKv6gFo0G4NPO0lr22+Ir9w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sonko\\RiderProjects\\CineMoviesWeb\\CineMoviesWeb\\CineMoviesWeb.csproj",
+  "projectFilePath": "C:\\Users\\sonko\\RiderProjects\\web\\CineMoviesWeb\\CineMoviesWeb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sonko\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\sonko\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.1\\microsoft.aspnetcore.authorization.7.0.1.nupkg.sha512",
@@ -13,6 +13,7 @@
     "C:\\Users\\sonko\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\7.0.1\\microsoft.aspnetcore.components.webassembly.7.0.1.nupkg.sha512",
     "C:\\Users\\sonko\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.devserver\\7.0.1\\microsoft.aspnetcore.components.webassembly.devserver.7.0.1.nupkg.sha512",
     "C:\\Users\\sonko\\.nuget\\packages\\microsoft.aspnetcore.metadata\\7.0.1\\microsoft.aspnetcore.metadata.7.0.1.nupkg.sha512",
+    "C:\\Users\\sonko\\.nuget\\packages\\microsoft.aspnetcore.webutilities\\2.2.0\\microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
     "C:\\Users\\sonko\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
     "C:\\Users\\sonko\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\sonko\\.nuget\\packages\\microsoft.extensions.configuration.binder\\7.0.1\\microsoft.extensions.configuration.binder.7.0.1.nupkg.sha512",
@@ -29,11 +30,13 @@
     "C:\\Users\\sonko\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\sonko\\.nuget\\packages\\microsoft.jsinterop\\7.0.1\\microsoft.jsinterop.7.0.1.nupkg.sha512",
     "C:\\Users\\sonko\\.nuget\\packages\\microsoft.jsinterop.webassembly\\7.0.1\\microsoft.jsinterop.webassembly.7.0.1.nupkg.sha512",
+    "C:\\Users\\sonko\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "C:\\Users\\sonko\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512",
+    "C:\\Users\\sonko\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\sonko\\.nuget\\packages\\system.io.pipelines\\7.0.0\\system.io.pipelines.7.0.0.nupkg.sha512",
     "C:\\Users\\sonko\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\sonko\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
-    "C:\\Users\\sonko\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\7.0.2\\microsoft.netcore.app.runtime.mono.browser-wasm.7.0.2.nupkg.sha512"
+    "C:\\Users\\sonko\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\7.0.3\\microsoft.netcore.app.runtime.mono.browser-wasm.7.0.3.nupkg.sha512"
   ],
   "logs": []
 }
