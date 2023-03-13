@@ -2,7 +2,7 @@
 
 public class Seat
 {
-    public int? Id { get; set; }
+    public int Id { get; set; }
 
     public int? CinemaId { get; set; }
 

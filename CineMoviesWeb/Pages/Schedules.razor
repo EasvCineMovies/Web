@@ -1,0 +1,45 @@
+﻿@page "/schedules"
+@using DevOpsCineMovies.Entities
+@using CineMoviesWeb.Models
+@inject NavigationManager NavigationManager
+
+<h3>Schedules</h3>
+
+@if (_schedules == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <div>
+        @foreach (var schedule in _schedules)
+        {
+            <div>
+                <p>@schedule.Movie?.Name</p>
+                <p>@schedule.Movie?.Description</p>
+                <p>@schedule.Movie?.Duration</p>
+                <p>@schedule.Movie?.Genre</p>
+                <p>@($"{schedule.FromTime} - {schedule.ToTime}")</p>
+                <button class="btn btn-primary" @onclick="() => {SeatSelection(schedule.Id);}" >Reserve</button>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    List<Schedule>? _schedules;
+    
+    protected override async Task OnInitializedAsync()
+    {
+        _schedules = await ApiRequestAdapter.ReadSchedule(1);
+        foreach (var schedule in _schedules)
+        {
+            schedule.Movie = await ApiRequestAdapter.ReadMovie(schedule.MovieId);
+        }
+    }
+    
+    void SeatSelection(int scheduleId)
+    {
+        NavigationManager.NavigateTo($"/seats/{scheduleId}");
+    }
+}

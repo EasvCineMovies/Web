@@ -1,4 +1,5 @@
-﻿using DevOpsCineMovies.Entities;
+﻿using System.Globalization;
+using DevOpsCineMovies.Entities;
 
 namespace CineMoviesWeb.Models;
 
@@ -58,13 +59,22 @@ public abstract class ApiRequestAdapter
         return await ApiRequest.Invoke<Movie>(body, "movie/create");
     }
     
-    public static async Task<List<Movie>> ReadMovie(int id)
+    public static async Task<Movie> ReadMovie(int id)
     {
         var body = new Dictionary<string, object>
         {
             { "id", id }
         };
-        return await ApiRequest.Invoke<List<Movie>>(body, "movie/read");
+        return await ApiRequest.Invoke<Movie>(body, "movie/read");
+    }
+    
+    public static async Task<List<Movie>> ReadAllMovie(int cinemaId)
+    {
+        var body = new Dictionary<string, object>
+        {
+            { "id", cinemaId }
+        };
+        return await ApiRequest.Invoke<List<Movie>>(body, "movie/readall");
     }
     
     public static async Task<Movie> UpdateMovie(int id, string name, string description, string genre, int duration, int cinemaId)
@@ -91,17 +101,17 @@ public abstract class ApiRequestAdapter
     }
     
     public static async Task<Reservation> CreateReservation(
-        int userId, int seats, int movieId, int cinemaId, int scheduleId, double price, DateTime reservationDate 
+        int userId, int seatId, int movieId, int cinemaId, int scheduleId, double price, DateTime reservationDate 
     )
     {
         var body = new Dictionary<string, object>
         {
             {"userId", userId},
-            {"seatId", seats},
+            {"seatId", seatId},
             {"movieId", movieId},
             {"cinemaId", cinemaId},
             {"scheduleId", scheduleId},
-            {"reservationDate", reservationDate},
+            {"reservationDate", reservationDate.ToString(CultureInfo.InvariantCulture)},
             {"price", price},
         };
         return await ApiRequest.Invoke<Reservation>(body, "reservation/create");
@@ -208,7 +218,7 @@ public abstract class ApiRequestAdapter
         return await ApiRequest.Invoke<Seat>(body, "seat/read");
     }
     
-    public static async Task<List<Seat>> ReadAllSeats(int cinemaId)
+    public static async Task<List<Seat>?> ReadAllSeats(int cinemaId)
     {
         var body = new Dictionary<string, object>
         {

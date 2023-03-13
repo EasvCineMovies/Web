@@ -15,13 +15,22 @@ public class MovieTests
         Assert.That(response, Is.Not.Null);
         Assert.That(response.GetType(), Is.EqualTo(typeof(Movie)));
         
-        _movieToDeleteId = response.Id ?? 0;
+        _movieToDeleteId = response.Id;
     }
     
     [Test]
     public async Task ReadMovie()
     {
         var response = await ApiRequestAdapter.ReadMovie(1);
+        
+        Assert.That(response, Is.Not.Null);
+        Assert.That(response.GetType(), Is.EqualTo(typeof(Movie)));
+    }
+    
+    [Test]
+    public async Task ReadAllMovie()
+    {
+        var response = await ApiRequestAdapter.ReadAllMovie(1);
         
         Assert.That(response, Is.Not.Null);
         Assert.That(response.GetType(), Is.EqualTo(typeof(List<Movie>)));

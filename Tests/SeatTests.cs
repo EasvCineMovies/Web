@@ -15,7 +15,7 @@ public class SeatTests
         Assert.That(response, Is.Not.Null);
         Assert.That(response.GetType(), Is.EqualTo(typeof(Seat)));
         
-        _seatToDeleteId = response.Id ?? 0;
+        _seatToDeleteId = response.Id;
     }
     
     [Test]

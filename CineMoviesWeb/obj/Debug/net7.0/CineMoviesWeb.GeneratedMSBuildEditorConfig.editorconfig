@@ -9,37 +9,49 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = CineMoviesWeb
 build_property.RootNamespace = CineMoviesWeb
-build_property.ProjectDir = C:\Users\sonko\RiderProjects\CineMoviesWeb\CineMoviesWeb\
+build_property.ProjectDir = C:\Users\sonko\RiderProjects\web\CineMoviesWeb\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\sonko\RiderProjects\CineMoviesWeb\CineMoviesWeb
+build_property.MSBuildProjectDirectory = C:\Users\sonko\RiderProjects\web\CineMoviesWeb
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/sonko/RiderProjects/CineMoviesWeb/CineMoviesWeb/App.razor]
+[C:/Users/sonko/RiderProjects/web/CineMoviesWeb/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sonko/RiderProjects/CineMoviesWeb/CineMoviesWeb/Pages/Index.razor]
+[C:/Users/sonko/RiderProjects/web/CineMoviesWeb/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sonko/RiderProjects/CineMoviesWeb/CineMoviesWeb/Pages/Login.razor]
+[C:/Users/sonko/RiderProjects/web/CineMoviesWeb/Pages/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sonko/RiderProjects/CineMoviesWeb/CineMoviesWeb/Shared/SurveyPrompt.razor]
+[C:/Users/sonko/RiderProjects/web/CineMoviesWeb/Pages/Reservations.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzZXJ2YXRpb25zLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sonko/RiderProjects/web/CineMoviesWeb/Pages/Schedules.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2NoZWR1bGVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sonko/RiderProjects/web/CineMoviesWeb/Pages/Seats.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VhdHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sonko/RiderProjects/web/CineMoviesWeb/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sonko/RiderProjects/CineMoviesWeb/CineMoviesWeb/_Imports.razor]
+[C:/Users/sonko/RiderProjects/web/CineMoviesWeb/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sonko/RiderProjects/CineMoviesWeb/CineMoviesWeb/Shared/MainLayout.razor]
+[C:/Users/sonko/RiderProjects/web/CineMoviesWeb/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-qnsv59qkux
 
-[C:/Users/sonko/RiderProjects/CineMoviesWeb/CineMoviesWeb/Shared/NavMenu.razor]
+[C:/Users/sonko/RiderProjects/web/CineMoviesWeb/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-2i7t1qc3iw

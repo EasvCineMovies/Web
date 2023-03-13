@@ -1,6 +1,7 @@
 ﻿@page "/login"
 @using CineMoviesWeb.Models
 @using System.Dynamic
+@using System.Diagnostics
 
 <PageTitle>Login</PageTitle>
 
@@ -30,17 +31,15 @@
 
     private async Task LoginClick()
     {
-        var response = await ApiRequestAdapter.LoginUser(
+        UserHandler.SetUser(await ApiRequestAdapter.LoginUser(
             phone: _phone ?? throw new Exception("Phone is null"),
             password: _password ?? throw new Exception("Password is null")
-            );
-
-        Console.WriteLine(response);
+            ));
     }
     
     private async Task RegisterClick()
     {
-        var response = await ApiRequestAdapter.CreateUser(
+        await ApiRequestAdapter.CreateUser(
             name: _name ?? throw new Exception("Name is null"),
             email: _email ?? throw new Exception("Email is null"),
             password: PasswordHelper.HashPassword(_password ?? throw new Exception("Password is null")) ,
