@@ -9,7 +9,7 @@ pipeline {
     {
       steps
       {
-        sh "dotnet ef database update"
+        sh "dotnet-ef database update"
         echo "DATABASE_MIGRATION STAGE HAS BEEN COMPLETED"
       }
     }
