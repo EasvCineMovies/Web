@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rEa0GZgnCbyUyAVIFqXLse7RktrtRwyYpQevwq8eyzmvaFw7rJ22Sq/2IXrLcxCXArgCfirTuXQvXrsQXGvGbA==",
+  "dgSpecHash": "oqEeoB51YG9YJnDK5/f2VLHcRbZH6goNgC6aKKrQl3tyRA8AqDtHeOacSSQdBfdaBUyfWpGjdMNy7hYRVOTCZw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sonko\\RiderProjects\\web\\Tests\\Tests.csproj",
+  "projectFilePath": "C:\\Users\\sonko\\RiderProjects\\CineMoviesWeb\\Tests\\Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sonko\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\sonko\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
