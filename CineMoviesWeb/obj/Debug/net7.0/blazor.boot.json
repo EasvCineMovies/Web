@@ -202,13 +202,13 @@
       "mscorlib.dll": "sha256-T52Qf1cS\/UysEoWOoE2ptEJEXfGpanQX5KNLyDiLv1E=",
       "netstandard.dll": "sha256-p32h5P3QmHJ\/FGoeE6m7f5g\/8ng2PSPGZktHyMadvIs=",
       "System.Private.CoreLib.dll": "sha256-6MwQcyKbqBsoZYOcD9fQJ4iKcn1qMmWRWVEkU2LLCb0=",
-      "CineMoviesWeb.dll": "sha256-hpFm3VZdygeertxLnBLzKnPDZlCQ9RRs7+RE\/wqQBSI="
+      "CineMoviesWeb.dll": "sha256-8J94YZgUUQcQKjRv8KsGW0yZcAL1cSGivlqR8WhTnPw="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "CineMoviesWeb.pdb": "sha256-9asIAyWr95\/p5kD2vWfY1o962Fkkx9yE9GpfTCyw7I4="
+      "CineMoviesWeb.pdb": "sha256-3nc1\/s8Hf6N8Q3xv7S3RT0hifkb1WCnW3degW23y+KA="
     },
     "runtime": {
       "dotnet.7.0.2.40u5csabsm.js": "sha256-4mh03qTse0uNR+dQ6ydExm4jJXph0RE8zGNCtF0jiNA=",

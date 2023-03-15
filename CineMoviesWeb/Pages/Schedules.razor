@@ -11,19 +11,33 @@
 }
 else
 {
-    <div>
-        @foreach (var schedule in _schedules)
-        {
-            <div>
-                <p>@schedule.Movie?.Name</p>
-                <p>@schedule.Movie?.Description</p>
-                <p>@schedule.Movie?.Duration</p>
-                <p>@schedule.Movie?.Genre</p>
-                <p>@($"{schedule.FromTime} - {schedule.ToTime}")</p>
-                <button class="btn btn-primary" @onclick="() => {SeatSelection(schedule.Id);}" >Reserve</button>
-            </div>
-        }
-    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Movie</th>
+                <th scope="col">Description</th>
+                <th scope="col">Duration</th>
+                <th scope="col">Genre</th>
+                <th scope="col">When</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var schedule in _schedules)
+            {
+                <tr>
+                    <td>@schedule.Movie!.Name</td>
+                    <td>@schedule.Movie.Description</td>
+                    <td>@schedule.Movie.Duration</td>
+                    <td>@schedule.Movie.Genre</td>
+                    <td>@($"{schedule.FromTime} - {schedule.ToTime}")</td>
+                    <td>
+                        <button class="btn btn-primary" @onclick="() => SeatSelection(schedule.Id)">Select Seat</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 }
 
 @code {
