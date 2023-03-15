@@ -5,14 +5,6 @@ pipeline {
   }
   stages
   {
-    stage("DATABASE_MIGRATION")
-    {
-      steps
-      {
-        sh "dotnet-ef database update"
-        echo "DATABASE_MIGRATION STAGE HAS BEEN COMPLETED"
-      }
-    }
     stage("STARTUP")
     {
       steps
