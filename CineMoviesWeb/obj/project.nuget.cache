@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+D5J4km4pvhcuGIBtmHS23gh7fVeDDVySstBbYXqOb4ZeYHwcTpzZU6JkOH6c+XEKv6gFo0G4NPO0lr22+Ir9w==",
+  "dgSpecHash": "US3iXTsT82VdbBO0rm1oT56HLi9S/KqUKIRS9FEOwFrTqnpiE9WLho7EPCeY0EcEnX498zf5ZIRaDTElJ9xz6g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sonko\\RiderProjects\\web\\CineMoviesWeb\\CineMoviesWeb.csproj",
+  "projectFilePath": "C:\\Users\\sonko\\RiderProjects\\CineMoviesWeb\\CineMoviesWeb\\CineMoviesWeb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sonko\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\sonko\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.1\\microsoft.aspnetcore.authorization.7.0.1.nupkg.sha512",
@@ -36,7 +36,7 @@
     "C:\\Users\\sonko\\.nuget\\packages\\system.io.pipelines\\7.0.0\\system.io.pipelines.7.0.0.nupkg.sha512",
     "C:\\Users\\sonko\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\sonko\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
-    "C:\\Users\\sonko\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\7.0.3\\microsoft.netcore.app.runtime.mono.browser-wasm.7.0.3.nupkg.sha512"
+    "C:\\Users\\sonko\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\7.0.2\\microsoft.netcore.app.runtime.mono.browser-wasm.7.0.2.nupkg.sha512"
   ],
   "logs": []
 }

@@ -2,15 +2,15 @@
 
 public class Reservation
 {
-    public int? Id { get; set; }
+    public int Id { get; set; }
 
     public int? UserId { get; set; }
 
-    public int? SeatId { get; set; }
+    public int SeatId { get; set; }
 
-    public int? MovieId { get; set; }
+    public int MovieId { get; set; }
 
-    public int? CinemaId { get; set; }
+    public int CinemaId { get; set; }
 
     public int? ScheduleId { get; set; }
 

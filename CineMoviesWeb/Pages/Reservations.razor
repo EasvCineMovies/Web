@@ -1,6 +1,82 @@
 ﻿@page "/reservations"
+@using DevOpsCineMovies.Entities
+@using CineMoviesWeb.Models
 <h3>Reservations</h3>
 
+<div>
+    @if (_reservations == null)
+    {
+        <p>Loading...</p>
+    }
+    else if (_reservations.Count == 0)
+    {
+        <p>No reservations found</p>
+    }
+    else
+    {
+        <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>
+                        Movie
+                    </th>
+                    <th>
+                        Cinema
+                    </th>
+                    <th>
+                        Date
+                    </th>
+                    <th>
+                        Seat
+                    </th>
+                    <th>
+                        Actions
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var reservation in _reservations)
+                {
+                    <tr>
+                        <td>
+                            @reservation.Movie!.Name
+                        </td>
+                        <td>
+                            @reservation.Cinema!.Name
+                        </td>
+                        <td>
+                            @reservation.ReservationDate
+                        </td>
+                        <td>
+                            @($"{reservation.Seat!.Row} - {reservation.Seat.Column}")
+                        </td>
+                        <td>
+                            <button class="btn btn-danger" @onclick="() => DeleteReservation(reservation.Id)">Delete</button>
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+    }
+</div>
+
 @code {
+    private List<Reservation>? _reservations;
     
+    protected override async Task OnInitializedAsync()
+    {
+        _reservations = await ApiRequestAdapter.ReadReservation(UserHandler.GetUser()!.Id);
+        foreach (var reservation in _reservations)
+        {
+            reservation.Cinema = await ApiRequestAdapter.ReadCinema(reservation.CinemaId);
+            reservation.Movie = await ApiRequestAdapter.ReadMovie(reservation.MovieId);
+            reservation.Seat = await ApiRequestAdapter.ReadSeat(reservation.SeatId);
+        }
+    }
+    
+    private async Task DeleteReservation(int id)
+    {
+        await ApiRequestAdapter.DeleteReservation(id);
+        _reservations!.Remove(_reservations.First(r => r.Id == id));
+    }
 }

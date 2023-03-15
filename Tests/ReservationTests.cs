@@ -15,7 +15,7 @@ public class ReservationTests
         Assert.That(response, Is.Not.Null);
         Assert.That(response.GetType(), Is.EqualTo(typeof(Reservation)));
         
-        _reservationToDeleteId = response.Id ?? 0;
+        _reservationToDeleteId = response.Id;
     }
     
     [Test]
