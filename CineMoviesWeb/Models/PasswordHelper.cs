@@ -1,6 +1,6 @@
 ﻿namespace CineMoviesWeb.Models;
 
-abstract class PasswordHelper {
+public abstract class PasswordHelper {
     
     public static string HashPassword(string password) {
         return BCrypt.Net.BCrypt.EnhancedHashPassword(password);
