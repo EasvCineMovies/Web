@@ -254,3 +254,5 @@ C:\Users\sonko\RiderProjects\web\Tests\obj\Debug\net7.0\Tests.genruntimeconfig.c
 C:\Users\sonko\RiderProjects\web\Tests\obj\Debug\net7.0\ref\Tests.dll
 C:\Users\sonko\RiderProjects\web\Tests\bin\Debug\net7.0\Microsoft.AspNetCore.WebUtilities.dll
 C:\Users\sonko\RiderProjects\web\Tests\bin\Debug\net7.0\Microsoft.Net.Http.Headers.dll
+C:\Users\sonko\RiderProjects\CineMoviesWeb\Tests\bin\Debug\net7.0\Microsoft.AspNetCore.WebUtilities.dll
+C:\Users\sonko\RiderProjects\CineMoviesWeb\Tests\bin\Debug\net7.0\Microsoft.Net.Http.Headers.dll
