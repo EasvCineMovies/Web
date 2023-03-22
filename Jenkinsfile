@@ -53,7 +53,7 @@ pipeline {
     {
       steps
       {
-        echo "HELLO DEPLOY :DDDDD"
+        echo "HELLO DEPLOY :DDDD"
       }
     }
   }
