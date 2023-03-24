@@ -67,7 +67,7 @@ else
         Schedule schedule = schedules.FirstOrDefault(s => s.Id == ScheduleId) ?? throw new Exception("Schedule not found");
         Movie movie = await ApiRequestAdapter.ReadMovie(schedule.MovieId);
         await ApiRequestAdapter.CreateReservation(
-            userId: UserHandler.GetUser()!.Id,
+            userPhone: UserHandler.GetUser()!.Phone,
             seatId: seatId,
             movieId: movie.Id,
             cinemaId: 1,

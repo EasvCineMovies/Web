@@ -15,7 +15,7 @@ public class CinemaTests
         Assert.That(response, Is.Not.Null);
         Assert.That(response.GetType(), Is.EqualTo(typeof(Cinema)));
         
-        _cinemaToDeleteId = response.Id ?? 0;
+        _cinemaToDeleteId = response.Id;
     }
     
     [Test]

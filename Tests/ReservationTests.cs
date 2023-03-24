@@ -10,7 +10,7 @@ public class ReservationTests
     [Test]
     public async Task CreateReservation()
     {
-        var response = await ApiRequestAdapter.CreateReservation(3, 9, 1, 1, 5, 499, DateTime.Now);
+        var response = await ApiRequestAdapter.CreateReservation("bobthephone", 1, 1, 1, 1, 499, DateTime.Now);
         
         Assert.That(response, Is.Not.Null);
         Assert.That(response.GetType(), Is.EqualTo(typeof(Reservation)));
@@ -21,7 +21,7 @@ public class ReservationTests
     [Test]
     public async Task ReadReservation()
     {
-        var response = await ApiRequestAdapter.ReadReservation(3);
+        var response = await ApiRequestAdapter.ReadReservation("bobthephone");
         
         Assert.That(response, Is.Not.Null);
         Assert.That(response.GetType(), Is.EqualTo(typeof(List<Reservation>)));
@@ -30,7 +30,7 @@ public class ReservationTests
     [Test]
     public async Task UpdateReservation()
     {
-        var response = await ApiRequestAdapter.UpdateReservation(11, 3, 9, 1, 1, 5, 499, DateTime.Now);
+        var response = await ApiRequestAdapter.UpdateReservation(1, "bobthephone", 1, 1, 1, 1, 499, DateTime.Now);
         
         Assert.That(response, Is.Not.Null);
         Assert.That(response.GetType(), Is.EqualTo(typeof(Reservation)));

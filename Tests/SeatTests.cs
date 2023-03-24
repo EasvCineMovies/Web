@@ -21,7 +21,7 @@ public class SeatTests
     [Test]
     public async Task ReadSeat()
     {
-        var response = await ApiRequestAdapter.ReadSeat(9);
+        var response = await ApiRequestAdapter.ReadSeat(1);
         
         Assert.That(response, Is.Not.Null);
         Assert.That(response.GetType(), Is.EqualTo(typeof(Seat)));
@@ -39,7 +39,7 @@ public class SeatTests
     [Test]
     public async Task UpdateSeat()
     {
-        var response = await ApiRequestAdapter.UpdateSeat(9, 1, 1, 1);
+        var response = await ApiRequestAdapter.UpdateSeat(1, 1, 1, 1);
         
         Assert.That(response, Is.Not.Null);
         Assert.That(response.GetType(), Is.EqualTo(typeof(Seat)));

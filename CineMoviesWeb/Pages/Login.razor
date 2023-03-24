@@ -40,10 +40,10 @@
     private async Task RegisterClick()
     {
         await ApiRequestAdapter.CreateUser(
+            phone: _phone ?? throw new Exception("Phone is null"),
             name: _name ?? throw new Exception("Name is null"),
             email: _email ?? throw new Exception("Email is null"),
-            password: PasswordHelper.HashPassword(_password ?? throw new Exception("Password is null")) ,
-            phone: _phone ?? throw new Exception("Phone is null")
+            password: PasswordHelper.HashPassword(_password ?? throw new Exception("Password is null"))
             );
     }
 

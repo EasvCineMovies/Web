@@ -30,7 +30,7 @@ public class ScheduleTests
     [Test]
     public async Task UpdateSchedule()
     {
-        var response = await ApiRequestAdapter.UpdateSchedule(5, 1, 1, DateTime.Now, DateTime.Now);
+        var response = await ApiRequestAdapter.UpdateSchedule(1, 1, 1, DateTime.Now, DateTime.Now);
         
         Assert.That(response, Is.Not.Null);
         Assert.That(response.GetType(), Is.EqualTo(typeof(Schedule)));

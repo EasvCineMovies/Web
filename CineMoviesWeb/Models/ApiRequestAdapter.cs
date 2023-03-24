@@ -101,12 +101,12 @@ public abstract class ApiRequestAdapter
     }
     
     public static async Task<Reservation> CreateReservation(
-        int userId, int seatId, int movieId, int cinemaId, int scheduleId, double price, DateTime reservationDate 
+        string userPhone, int seatId, int movieId, int cinemaId, int scheduleId, double price, DateTime reservationDate 
     )
     {
         var body = new Dictionary<string, object>
         {
-            {"userId", userId},
+            {"userPhone", userPhone},
             {"seatId", seatId},
             {"movieId", movieId},
             {"cinemaId", cinemaId},
@@ -117,23 +117,23 @@ public abstract class ApiRequestAdapter
         return await ApiRequest.Invoke<Reservation>(body, "reservation/create");
     }
     
-    public static async Task<List<Reservation>> ReadReservation(int id)
+    public static async Task<List<Reservation>> ReadReservation(string phone)
     {
         var body = new Dictionary<string, object>
         {
-            { "id", id }
+            { "phone", phone }
         };
         return await ApiRequest.Invoke<List<Reservation>>(body, "reservation/read");
     }
     
     public static async Task<Reservation> UpdateReservation(
-        int id, int userId, int seats, int movieId, int cinemaId, int scheduleId, double price, DateTime reservationDate 
+        int id, string userPhone, int seats, int movieId, int cinemaId, int scheduleId, double price, DateTime reservationDate 
     )
     {
         var body = new Dictionary<string, object>
         {
             {"id", id},
-            {"userId", userId},
+            {"userPhone", userPhone},
             {"seatId", seats},
             {"movieId", movieId},
             {"cinemaId", cinemaId},
@@ -248,34 +248,33 @@ public abstract class ApiRequestAdapter
         return await ApiRequest.Invoke<Seat>(body, "seat/delete");
     }
     
-    public static async Task<User> CreateUser(string name, string phone, string email, string password)
+    public static async Task<User> CreateUser(string phone, string name, string email, string password)
     {
         var body = new Dictionary<string, object>
         {
-            { "name", name },
             { "phone", phone },
+            { "name", name },
             { "email", email },
             { "password", password },
         };
         return await ApiRequest.Invoke<User>(body, "user/create");
     }
     
-    public static async Task<User> ReadUser(int id)
+    public static async Task<User> ReadUser(string phone)
     {
         var body = new Dictionary<string, object>
         {
-            { "id", id }
+            { "phone", phone }
         };
         return await ApiRequest.Invoke<User>(body, "user/read");
     }
     
-    public static async Task<User> UpdateUser(int id, string name, string phone, string email, string password)
+    public static async Task<User> UpdateUser(string phone, string name, string email, string password)
     {
         var body = new Dictionary<string, object>
         {
-            { "id", id },
-            { "name", name },
             { "phone", phone },
+            { "name", name },
             { "email", email },
             { "password", password },
         };
@@ -292,11 +291,11 @@ public abstract class ApiRequestAdapter
         return await ApiRequest.Invoke<User>(body, "user/login");
     }
     
-    public static async Task<User> DeleteUser(int id)
+    public static async Task<User> DeleteUser(string phone)
     {
         var body = new Dictionary<string, object>
         {
-            { "id", id }
+            { "phone", phone }
         };
         return await ApiRequest.Invoke<User>(body, "user/delete");
     }
