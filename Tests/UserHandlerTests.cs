@@ -10,10 +10,9 @@ public class UserHandlerTests
     {
         var user = new User
         {
-            Id = 1,
+            Phone = "phone",
             Name = "username",
             Password = "password",
-            Phone = "phone"
         };
         
         UserHandler.SetUser(user);
@@ -27,10 +26,9 @@ public class UserHandlerTests
     {
         var user = new User
         {
-            Id = 1,
+            Phone = "phone",
             Name = "username",
             Password = "password",
-            Phone = "phone"
         };
         
         UserHandler.SetUser(user);

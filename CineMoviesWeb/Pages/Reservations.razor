@@ -65,7 +65,7 @@
     
     protected override async Task OnInitializedAsync()
     {
-        _reservations = await ApiRequestAdapter.ReadReservation(UserHandler.GetUser()!.Id);
+        _reservations = await ApiRequestAdapter.ReadReservation(UserHandler.GetUser()!.Phone);
         foreach (var reservation in _reservations)
         {
             reservation.Cinema = await ApiRequestAdapter.ReadCinema(reservation.CinemaId);
