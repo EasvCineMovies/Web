@@ -1,0 +1,6 @@
+﻿services:
+  cinemoviesweb:
+    image: cinemoviesweb
+    build:
+      context: .
+      dockerfile: CineMoviesWeb/Dockerfile
