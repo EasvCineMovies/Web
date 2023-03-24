@@ -39,7 +39,7 @@ public class ApiRequest
             throw new Exception($"Call to {path} failed: {message}");
 
         if (data == null)
-            throw new Exception($"There is no data in the response from {path}");
+            throw new NullDataException($"There is no data in the response from {path}");
 
         var converted = data.ToObject<T>();
         if (converted == null)
@@ -47,4 +47,9 @@ public class ApiRequest
         
         return converted;
     }
+}
+
+public class NullDataException : Exception
+{
+    public NullDataException(string message) : base(message) { }
 }

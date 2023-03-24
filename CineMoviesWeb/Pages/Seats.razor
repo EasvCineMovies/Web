@@ -1,6 +1,9 @@
 ﻿@page "/seats/{scheduleId:int}"
 @using DevOpsCineMovies.Entities
 @using CineMoviesWeb.Models
+@using System.Security.Cryptography
+
+@inject IJSRuntime JsRuntime
 
 <h3>Seats</h3>
 
@@ -60,20 +63,51 @@ else
     {
         _seats = await ApiRequestAdapter.ReadAllSeats(1);
     }
-    
+
     async Task CreateReservation(int seatId)
     {
-        List<Schedule> schedules = await ApiRequestAdapter.ReadSchedule(1);
-        Schedule schedule = schedules.FirstOrDefault(s => s.Id == ScheduleId) ?? throw new Exception("Schedule not found");
-        Movie movie = await ApiRequestAdapter.ReadMovie(schedule.MovieId);
-        await ApiRequestAdapter.CreateReservation(
-            userPhone: UserHandler.GetUser()!.Phone,
-            seatId: seatId,
-            movieId: movie.Id,
-            cinemaId: 1,
-            scheduleId: ScheduleId,
-            price: 250,
-            reservationDate: DateTime.Now
-            );
+        if (UserHandler.GetUser() is null)
+        {
+            string? phoneNo = await JsRuntime.InvokeAsync<string?>("prompt", "Enter your phone number here: "); // Prompt
+            
+            if (phoneNo is null)
+            {
+                return;
+            }
+            try
+            {
+                await ApiRequestAdapter.ReadUser(phoneNo);
+                await JsRuntime.InvokeVoidAsync("alert", "User already exists");
+                return;
+            }
+            catch (Exception exception)
+            {
+                if (exception.Message.Contains("User not found"))
+                {
+                    await ApiRequestAdapter.CreateUser(
+                        phone: phoneNo,
+                        name: "anon",
+                        email: "anon",
+                        password: PasswordHelper.HashPassword(RandomNumberGenerator.GetInt32(0, int.MaxValue).ToString())
+                        );
+                    UserHandler.SetUser(await ApiRequestAdapter.ReadUser(phoneNo));
+                }
+            }
+            
+            
+            List<Schedule> schedules = await ApiRequestAdapter.ReadSchedule(1);
+            Schedule schedule = schedules.FirstOrDefault(s => s.Id == ScheduleId) ?? throw new Exception("Schedule not found");
+            Movie movie = await ApiRequestAdapter.ReadMovie(schedule.MovieId);
+            await ApiRequestAdapter.CreateReservation(
+                userPhone: UserHandler.GetUser()!.Phone,
+                seatId: seatId,
+                movieId: movie.Id,
+                cinemaId: 1,
+                scheduleId: ScheduleId,
+                price: 250,
+                reservationDate: DateTime.Now
+                );
+        }
     }
+
 }
