@@ -22,6 +22,7 @@ pipeline {
       {
         sh "dotnet restore"
         sh "dotnet build CineMoviesWeb/CineMoviesWeb.csproj"
+        sh 'docker-compose build'
         echo "BUILD STAGE HAS BEEN COMPLETED"
       }
     }
@@ -35,6 +36,7 @@ pipeline {
           sh "dotnet test --collect:'XPlat Code Coverage'"
           sh "dotnet restore"
           sh "dotnet test Tests.csproj"
+          sh 'docker-compose run --rm app pytest'
           echo "TEST STAGE HAS BEEN COMPLETED"
         }
       }
@@ -53,8 +55,14 @@ pipeline {
     {
       steps
       {
+        sh 'docker-compose up -d'
         echo "HELLO DEPLOY :DDDD"
       }
+    }
+  }
+  post {
+    always {
+      sh 'docker-compose down'
     }
   }
 }
