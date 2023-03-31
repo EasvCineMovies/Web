@@ -55,8 +55,8 @@ pipeline {
     {
       steps
       {
-        sh 'docker-compose up -d'
-        echo "HELLO DEPLOY :DDDD"
+        sh 'docker-compose up -d --remove-orphans'
+        echo "DEPLOY STAGE HAS BEEN COMPLETED"
       }
     }
   }
