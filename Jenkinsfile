@@ -36,7 +36,7 @@ pipeline {
           sh "dotnet test --collect:'XPlat Code Coverage'"
           sh "dotnet restore"
           sh "dotnet test Tests.csproj"
-          sh 'docker-compose run --rm app Tests'
+          sh 'docker-compose run --rm cinemoviesweb Tests'
           echo "TEST STAGE HAS BEEN COMPLETED"
         }
       }
