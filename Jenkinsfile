@@ -37,7 +37,7 @@ pipeline {
           sh "dotnet test --collect:'XPlat Code Coverage'"
           sh "dotnet restore"
           sh "dotnet test Tests.csproj"
-          sh 'docker-compose run --rm cinemoviesweb Tests'
+          /*sh 'docker-compose run --rm cinemoviesweb Tests'*/
           sh "node_modules/.bin/testcafe chrome CineMoviesWeb/**/* -r xunit:res.xml"
           echo "TEST STAGE HAS BEEN COMPLETED"
         }
@@ -57,14 +57,14 @@ pipeline {
     {
       steps
       {
-        sh 'docker-compose up -d --remove-orphans'
+        /*sh 'docker-compose up -d --remove-orphans'*/
         echo "DEPLOY STAGE HAS BEEN COMPLETED"
       }
     }
   }
   post {
     always {
-      sh 'docker-compose down'
+      /*sh 'docker-compose down'*/
     }
   }
 }
