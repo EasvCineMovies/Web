@@ -95,19 +95,19 @@ else
             }
             
             
-            List<Schedule> schedules = await ApiRequestAdapter.ReadSchedule(1);
-            Schedule schedule = schedules.FirstOrDefault(s => s.Id == ScheduleId) ?? throw new Exception("Schedule not found");
-            Movie movie = await ApiRequestAdapter.ReadMovie(schedule.MovieId);
-            await ApiRequestAdapter.CreateReservation(
-                userPhone: UserHandler.GetUser()!.Phone,
-                seatId: seatId,
-                movieId: movie.Id,
-                cinemaId: 1,
-                scheduleId: ScheduleId,
-                price: 250,
-                reservationDate: DateTime.Now
-                );
         }
+        List<Schedule> schedules = await ApiRequestAdapter.ReadSchedule(1);
+        Schedule schedule = schedules.FirstOrDefault(s => s.Id == ScheduleId) ?? throw new Exception("Schedule not found");
+        Movie movie = await ApiRequestAdapter.ReadMovie(schedule.MovieId);
+        await ApiRequestAdapter.CreateReservation(
+            userPhone: UserHandler.GetUser()!.Phone,
+            seatId: seatId,
+            movieId: movie.Id,
+            cinemaId: 1,
+            scheduleId: ScheduleId,
+            price: 250,
+            reservationDate: DateTime.Now
+            );
     }
 
 }
