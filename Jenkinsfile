@@ -1,8 +1,10 @@
 pipeline {
   agent any
+  
   triggers {
     pollSCM('H/5 * * * *')
   }
+  
   stages
   {
     stage("STARTUP")
@@ -40,10 +42,11 @@ pipeline {
           /*sh 'docker-compose run --rm cinemoviesweb Tests'*/
           /*sh "node_modules/.bin/testcafe chrome CineMoviesWeb/starstar/star -r xunit:res.xml"*/
         }
-        dir("CineMoviesWeb")
-        {
-          sh "k6 run k6Tests.js"
-        }
+        
+        sh 'sudo chmod +x setup_k6.sh'
+        sh 'sudo ./setup_k6.sh'
+        sh "k6 run k6Tests.js"
+        
         echo "TEST STAGE HAS BEEN COMPLETED"
       }
       post
