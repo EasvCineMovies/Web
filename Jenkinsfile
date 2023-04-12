@@ -38,7 +38,7 @@ pipeline {
           sh "dotnet restore"
           sh "dotnet test Tests.csproj"
           /*sh 'docker-compose run --rm cinemoviesweb Tests'*/
-          /*sh "node_modules/.bin/testcafe chrome CineMoviesWeb/**/* -r xunit:res.xml"*/
+          /*sh "node_modules/.bin/testcafe chrome CineMoviesWeb/starstar/star -r xunit:res.xml"*/
           echo "TEST STAGE HAS BEEN COMPLETED"
         }
       }
