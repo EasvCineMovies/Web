@@ -45,7 +45,7 @@ pipeline {
         
         sh 'sudo chmod +x setup_k6.sh'
         sh 'sudo ./setup_k6.sh'
-        sh "k6 run k6Tests.js"
+        sh "k6 run -e HOSTING=easvcinemovies.azurewebsites.net k6Tests.js"
         
         echo "TEST STAGE HAS BEEN COMPLETED"
       }
