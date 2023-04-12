@@ -13,7 +13,7 @@ export const options = {
 
 export default function () {
     const data = { id: 1};
-    http.post('https://easvcinemovies.azurewebsites.net/cinema/read', JSON.stringify(data), 
+    http.post(`https://${__ENV.HOSTING}/cinema/read`, JSON.stringify(data), 
         {
         headers: { 'Content-Type': 'application/json' }
         }
