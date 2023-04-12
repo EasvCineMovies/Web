@@ -65,6 +65,7 @@ pipeline {
   post {
     always {
       /*sh 'docker-compose down'*/
+      echo "POST HAS BEEN COMPLETED"
     }
   }
 }
