@@ -23,6 +23,7 @@ pipeline {
         sh "dotnet restore"
         sh "dotnet build CineMoviesWeb/CineMoviesWeb.csproj"
         sh 'docker-compose build'
+        sh "npm install testcafe testcafe-reporter-xunit"
         echo "BUILD STAGE HAS BEEN COMPLETED"
       }
     }
@@ -37,6 +38,7 @@ pipeline {
           sh "dotnet restore"
           sh "dotnet test Tests.csproj"
           sh 'docker-compose run --rm cinemoviesweb Tests'
+          sh "node_modules/.bin/testcafe chrome CineMoviesWeb/**/* -r xunit:res.xml"
           echo "TEST STAGE HAS BEEN COMPLETED"
         }
       }
