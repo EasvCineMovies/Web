@@ -1,5 +1,6 @@
 ﻿
 import http from 'k6/http'
+import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporter/main/dist/bundle.js";
 
 export const options = {
     threshold: {
@@ -7,9 +8,20 @@ export const options = {
         http_req_duration: ['p(95)<200']
     },
     duration: '5s',
-    vus: 50
+    vus: 10
 }
 
 export default function () {
-    http.get('https://easvcinemovies.azurewebsites.net/')
+    const data = { id: 1};
+    http.post('https://easvcinemovies.azurewebsites.net/cinema/read', JSON.stringify(data), 
+        {
+        headers: { 'Content-Type': 'application/json' }
+        }
+    );
+}
+
+export function handleSummary(data) {
+    return {
+        "summary.html": htmlReport(data),
+    };
 }
