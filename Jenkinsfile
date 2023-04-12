@@ -12,8 +12,8 @@ pipeline {
         dir("Tests")
         {
           sh "rm -rf TestResults"
-          echo "STARTUP STAGE HAS BEEN COMPLETED"
         }
+        echo "STARTUP STAGE HAS BEEN COMPLETED"
       }
     }
     stage("BUILD")
@@ -39,8 +39,12 @@ pipeline {
           sh "dotnet test Tests.csproj"
           /*sh 'docker-compose run --rm cinemoviesweb Tests'*/
           /*sh "node_modules/.bin/testcafe chrome CineMoviesWeb/starstar/star -r xunit:res.xml"*/
-          echo "TEST STAGE HAS BEEN COMPLETED"
         }
+        dir("CineMoviesWeb")
+        {
+          sh "k6 run k6Tests.js"
+        }
+        echo "TEST STAGE HAS BEEN COMPLETED"
       }
       post
       {
